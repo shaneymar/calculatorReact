@@ -17,15 +17,12 @@ function App() {
 
   const handleCalculate = () => {
     try{
-      if(input.trim === ''){
+      if(input.trim() === ''){
         setResult('Error');
         return;
       }
 
-      if (/[\+\-\*/]$/.test(input)) {
-        setResult('Error');
-        return;
-      }
+     
 
       const output = evaluate(input);
 
