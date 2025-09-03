@@ -22,6 +22,11 @@ function App() {
         return;
       }
 
+      if (/[\+\-\*/]$/.test(input)) {
+        setResult('Error');
+        return;
+      }
+
       const output = evaluate(input);
 
       if(isNaN(output)){
